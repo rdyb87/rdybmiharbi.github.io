@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adib_Ibrahim</title>
+  <meta name="description" content="Full Stack Developer transforming ideas into reality">
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body class="bg-brandBg" x-data="{ mobileMenuOpen: false }">
+
+<header class="bg-brandBg header-border sticky top-0 z-50" x-data="{ open: false }">
+  <div class="container-custom py-4 flex justify-between items-center">
+    
+    <div class="px-5 py-1.5 border-2 border-brandDark rounded-full shadow-neo bg-white">
+      <span class="font-extrabold text-xl tracking-tight">RdybMiharbi</span>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="/" class="font-bold text-sm uppercase tracking-widest text-brandPurple">Home</a>
+	  <a href="/blog.html" class="font-bold text-sm uppercase tracking-widest text-brandDark">Blog</a>
+      <a href="/about.html" class="font-bold text-sm uppercase tracking-widest text-gray-500 hover:text-brandDark">About</a>
+	  <a href="/contact.html" class="font-bold text-sm uppercase tracking-widest text-gray-500 hover:text-brandDark">Contact</a>
+      <div class="flex space-x-3 ml-4">
+        <a href="#" class="icon-btn"> </a>
+        <a href="#" class="icon-btn"> </a>
+      </div>
+    </nav>
+
+    <button @click="open = !open" class="md:hidden p-2 border-2 border-brandDark rounded-lg bg-white shadow-neo">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+    </button>
+  </div>
+  
+  <div x-show="open" class="md:hidden bg-brandBg border-t-2 border-brandDark p-6 space-y-4">
+    <a href="#" class="block font-bold uppercase">Home</a>
+    <a href="#" class="block font-bold uppercase">Portfolio</a>
+  </div>
+</header>
+
+<section class="bg-brandBg py-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+    
+    <div>
+      <div class="inline-flex items-center gap-2 border-2 border-brandDark px-4 py-1 rounded-full shadow-neo mb-10 bg-white">
+        <span class="w-3 h-3 bg-purple-600 rounded-full animate-pulse"></span>
+        <span class="font-bold text-xs uppercase tracking-widest">Open for Work</span>
+      </div>
+      
+      <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight mb-8">
+        Bridging<br>
+        <span class="text-highlight italic">Product</span> &<br>
+        Code
+      </h1>
+      
+      <p class="text-xl text-gray-700 max-w-lg leading-relaxed">
+        Selamat datang dan sila mengembara diblog ini. <span class="font-bold">dimana ada kemahuan, disitu ada jalan.</span>
+      </p>
+    </div>
+
+    <div class="relative flex justify-center lg:justify-end">
+      <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:16px_16px] rounded-full scale-110"></div>
+      
+      <div class="relative group">
+        <div class="w-[400px] h-[450px] border-4 border-brandDark shadow-neo overflow-hidden transition-transform duration-500 group-hover:-rotate-2" 
+             style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;">
+          <img src="/images/profile.jpg" alt="Profile" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="absolute -top-4 -right-4 w-12 h-12 bg-white border-2 border-brandDark rounded-full shadow-neo flex items-center justify-center transition-transform group-hover:scale-110">
+          <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+  <!-- Hero Section -->
+  <section class="py-24 bg-brandBg">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
+        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPurple rounded-t-[10px] border-b-2 border-brandDark"></div>
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-brandPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Product Strategy</h3>
+        <p class="text-gray-600 text-center leading-relaxed">Defining roadmaps, prioritizing features, and aligning technical solutions with business goals and user needs.</p>
+      </div>
+
+      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
+        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPink rounded-t-[10px] border-b-2 border-brandDark"></div>
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Technical Leadership</h3>
+        <p class="text-gray-600 text-center leading-relaxed">Leading cross-functional teams, making architectural decisions, and driving technical excellence across projects.</p>
+      </div>
+
+      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
+        <div class="absolute top-0 left-0 right-0 h-4 bg-brandYellow rounded-t-[10px] border-b-2 border-brandDark"></div>
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-brandYellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Hands-On Development</h3>
+        <p class="text-gray-600 text-center leading-relaxed">Building production-ready applications from frontend to backend, ensuring quality through code and execution.</p>
+      </div>
+
+      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
+        <div class="absolute top-0 left-0 right-0 h-4 bg-brandGreen rounded-t-[10px] border-b-2 border-brandDark"></div>
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Data-Driven Decisions</h3>
+        <p class="text-gray-600 text-center leading-relaxed">Leveraging analytics, user research, and metrics to validate assumptions and guide product iterations.</p>
+      </div>
+
+      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
+        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPurple rounded-t-[10px] border-b-2 border-brandDark"></div>
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-brandPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Stakeholder Communication</h3>
+        <p class="text-gray-600 text-center leading-relaxed">Translating complex technical concepts into clear business value, aligning diverse teams toward shared vision.</p>
+      </div>
+
+      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
+        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPink rounded-t-[10px] border-b-2 border-brandDark"></div>
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
+          <svg class="w-6 h-6 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        </div>
+        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">User-Centric Mindset</h3>
+        <p class="text-gray-600 text-center leading-relaxed">Deeply understanding user pain points, conducting empathy-driven discovery, and building products that solve real problems.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- What I Bring Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">What I Bring</h2>
+        <p class="text-xl text-gray-600">The unique blend of product strategy and technical execution.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Product Strategy</h3>
+          <p class="text-gray-600">
+            Defining roadmaps, prioritizing features, and aligning technical solutions with business goals and user needs.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Technical Leadership</h3>
+          <p class="text-gray-600">
+            Leading cross-functional teams, making architectural decisions, and driving technical excellence across projects.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Hands-On Development</h3>
+          <p class="text-gray-600">
+            Building production-ready applications from frontend to backend, ensuring quality through code and execution.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Data-Driven Decisions</h3>
+          <p class="text-gray-600">
+            Leveraging analytics, user research, and metrics to validate assumptions and guide product iterations with measurable impact.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Stakeholder Communication</h3>
+          <p class="text-gray-600">
+            Translating complex technical concepts into clear business value, aligning diverse teams toward shared product vision.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-3">User-Centric Mindset</h3>
+          <p class="text-gray-600">
+            Deeply understanding user pain points, conducting empathy-driven discovery, and building products that solve real problems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <h2 class="text-4xl font-bold mb-2">Featured Work</h2>
+          <p class="text-xl text-gray-600">Products I've built and shipped, from initial strategy to final deployment.</p>
+        </div>
+        <a href="/portfolio.html" class="hidden md:inline-block text-gray-900 font-medium hover:underline">
+          View All
+        </a>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
+          <div class="aspect-video bg-gradient-to-br from-blue-500 to-purple-600"></div>
+          <div class="p-6">
+            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">AI Tool</span>
+            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">E-Commerce Platform</h3>
+            <p class="text-gray-600 mb-4">
+              Full-stack e-commerce solution with modern UI and seamless checkout experience.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">React</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Node.js</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
+          <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600"></div>
+          <div class="p-6">
+            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Web App</span>
+            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">Task Management System</h3>
+            <p class="text-gray-600 mb-4">
+              Collaborative project management tool with real-time updates and team features.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Vue.js</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">PostgreSQL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
+          <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-600"></div>
+          <div class="p-6">
+            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Developer Tool</span>
+            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">API Documentation Generator</h3>
+            <p class="text-gray-600 mb-4">
+              Automated API documentation tool with interactive testing capabilities.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TypeScript</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Express</span>
+              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Swagger</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/portfolio.html" class="md:hidden inline-block text-gray-900 font-medium hover:underline">
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Posts -->
+  <section class="py-20 bg-gray-50" x-data="featuredPosts">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <h2 class="text-4xl font-bold mb-2">Latest from the Blog</h2>
+          <p class="text-xl text-gray-600">Insights on product strategy, technical leadership, and building software that matters.</p>
+        </div>
+        <a href="/blog.html" class="hidden md:inline-block text-gray-900 font-medium hover:underline">
+          View All
+        </a>
+      </div>
+      
+      <div x-show="loading" class="text-center py-12">
+        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+      </div>
+      
+      <div x-show="!loading" class="grid md:grid-cols-3 gap-6">
+        <template x-for="post in posts" :key="post.slug">
+          <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group cursor-pointer" @click="window.location.href = `/blog/${post.slug}.html`">
+            <div class="aspect-video bg-gray-200">
+              <img :src="post.image" :alt="post.title" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                <span class="uppercase font-medium" x-text="post.category"></span>
+              </div>
+              <div class="text-sm text-gray-500 mb-2" x-text="post.date"></div>
+              <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600" x-text="post.title"></h3>
+              <p class="text-gray-600 mb-4 line-clamp-2" x-text="post.excerpt"></p>
+              <span class="text-blue-600 font-medium text-sm">Read Article</span>
+            </div>
+          </article>
+        </template>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/blog.html" class="md:hidden inline-block text-gray-900 font-medium hover:underline">
+          View All Posts
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Toolkit -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Technical Toolkit</h2>
+        <p class="text-xl text-gray-600">The technical stack I leverage to ship products from concept to deployment.</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Frontend</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">HTML5</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">CSS3</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">JavaScript</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">TypeScript</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Vue.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">React</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Next.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Nuxt.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Alpine.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">HTMX</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Backend</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">PHP</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Laravel</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Python</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Django</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Node.js</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Express</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">MySQL</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">PostgreSQL</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">MongoDB</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Redis</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Tools & More</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Git & GitHub</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Docker</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Vite</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Figma</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Postman</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">CI/CD</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Linux</span>
+            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-4">Ready to turn your vision INTO REALITY?</h2>
+      <a href="/contact.html" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition mt-8">
+        Let's Talk
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2026 rdybmiharbi.</p>
+    </div>
+  </footer>
+</body>
+</html>

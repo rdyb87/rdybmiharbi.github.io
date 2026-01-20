@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Page - Verify Setup</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <!-- Test Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50" x-data="navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="text-xl font-bold">Test</a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="text-gray-900 font-medium">Home</a>
+          <a href="/test.html" class="text-gray-600 hover:text-gray-900">Test</a>
+        </div>
+        
+        <button @click="toggleMobileMenu" class="md:hidden p-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Test Content -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold mb-8">Setup Test Page</h1>
+      
+      <!-- Tailwind Test -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 mb-8">
+        <h2 class="text-2xl font-bold mb-4">✅ Tailwind CSS Test</h2>
+        <p class="text-gray-600 mb-4">If you see this card with rounded corners, border, and proper spacing, Tailwind is working!</p>
+        <button class="bg-gray-900 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition">
+          Test Button
+        </button>
+      </div>
+
+      <!-- Alpine.js Test -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 mb-8" x-data="{ count: 0 }">
+        <h2 class="text-2xl font-bold mb-4">✅ Alpine.js Test</h2>
+        <p class="text-gray-600 mb-4">Click the button to test Alpine.js interactivity:</p>
+        <button 
+          @click="count++" 
+          class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
+        >
+          Clicked: <span x-text="count"></span> times
+        </button>
+      </div>
+
+      <!-- Icons Test -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 mb-8">
+        <h2 class="text-2xl font-bold mb-4">✅ Icons Test</h2>
+        <p class="text-gray-600 mb-4">SVG icons should be properly sized:</p>
+        <div class="flex gap-4">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid Test -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 mb-8">
+        <h2 class="text-2xl font-bold mb-4">✅ Responsive Grid Test</h2>
+        <p class="text-gray-600 mb-4">Grid should show 1 column on mobile, 2 on tablet, 3 on desktop:</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-blue-100 p-4 rounded-lg">Card 1</div>
+          <div class="bg-green-100 p-4 rounded-lg">Card 2</div>
+          <div class="bg-purple-100 p-4 rounded-lg">Card 3</div>
+        </div>
+      </div>
+
+      <!-- Status Summary -->
+      <div class="bg-green-50 border border-green-200 p-8 rounded-xl">
+        <h2 class="text-2xl font-bold text-green-800 mb-4">🎉 If everything above looks good:</h2>
+        <ul class="space-y-2 text-green-700">
+          <li>✓ Tailwind CSS is working</li>
+          <li>✓ Alpine.js is working</li>
+          <li>✓ Icons are properly sized</li>
+          <li>✓ Responsive design is working</li>
+          <li>✓ Your setup is correct!</li>
+        </ul>
+        <p class="mt-4 text-green-700">You can now go to <a href="/index.html" class="underline font-bold">index.html</a> to see the full site.</p>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>

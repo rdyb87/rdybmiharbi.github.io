@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adib_Ibrahim</title>
+  <meta name="description" content="Full Stack Developer transforming ideas into reality">
+  <script type="module" crossorigin src="./assets/main-DntU2GE0.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-Cq9OTpKp.css">
+</head>
+<body class="bg-brandBg" x-data="{ mobileMenuOpen: false }">
+
+<header class="bg-brandBg header-border sticky top-0 z-50" x-data="{ open: false }">
+  <div class="container-custom py-4 flex justify-between items-center">
+    
+    <div class="px-5 py-1.5 border-2 border-brandDark rounded-full shadow-neo bg-white">
+      <span class="font-extrabold text-xl tracking-tight">RdybMiharbi</span>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="/" class="font-bold text-sm uppercase tracking-widest text-brandDark">Home</a>
+	  <a href="/blog.html" class="font-bold text-sm uppercase tracking-widest text-gray-500 hover:text-brandDark">Blog</a>
+      <a href="/about.html" class="font-bold text-sm uppercase tracking-widest text-brandPurple">About</a>
+	  <a href="/contact.html" class="font-bold text-sm uppercase tracking-widest text-gray-500 hover:text-brandDark">Contact</a>
+      <div class="flex space-x-3 ml-4">
+        <a href="#" class="icon-btn"> </a>
+        <a href="#" class="icon-btn"> </a>
+      </div>
+    </nav>
+
+    <button @click="open = !open" class="md:hidden p-2 border-2 border-brandDark rounded-lg bg-white shadow-neo">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+    </button>
+  </div>
+  
+  <div x-show="open" class="md:hidden bg-brandBg border-t-2 border-brandDark p-6 space-y-4">
+    <a href="#" class="block font-bold uppercase">Home</a>
+    <a href="#" class="block font-bold uppercase">Portfolio</a>
+  </div>
+</header>
+
+  <!-- Header -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-5xl font-bold mb-4">About Me</h1>
+      <p class="text-xl text-gray-600">My journey, expertise, and what drives me</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div>
+          <img src="/images/profile-about.jpg" alt="About Me" class="rounded-2xl w-full shadow-lg">
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Full Stack Developer & Technical Product Manager</h2>
+          <div class="space-y-4 text-lg text-gray-600">
+            <p>
+              Hi! I'm Ridho Yudha Bayu Miharbi, a passionate Full Stack Developer with over 8 years of experience 
+              in building modern web applications and leading technical teams.
+            </p>
+            <p>
+              I specialize in bridging the gap between product strategy and technical execution, ensuring that 
+              every line of code contributes to meaningful business outcomes and exceptional user experiences.
+            </p>
+            <p>
+              My expertise spans across frontend technologies like React, Vue.js, and modern JavaScript frameworks, 
+              as well as backend systems using Node.js, Python, and PHP. I'm equally comfortable writing code as 
+              I am defining product roadmaps and guiding teams toward successful delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold mb-8">Professional Experience</h2>
+        <div class="space-y-8">
+          
+          <div class="bg-white p-8 rounded-xl border border-gray-200">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold">Senior Full Stack Developer</h3>
+                <p class="text-gray-600">Tech Solutions Inc.</p>
+              </div>
+              <span class="text-sm text-gray-500">2021 - Present</span>
+            </div>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Led development of enterprise-grade applications serving 100K+ users</li>
+              <li>• Architected microservices infrastructure reducing system downtime by 40%</li>
+              <li>• Mentored junior developers and conducted technical training sessions</li>
+              <li>• Collaborated with product teams to define technical roadmaps</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl border border-gray-200">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold">Full Stack Developer</h3>
+                <p class="text-gray-600">Digital Agency Co.</p>
+              </div>
+              <span class="text-sm text-gray-500">2018 - 2021</span>
+            </div>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Built 20+ client projects ranging from e-commerce to SaaS platforms</li>
+              <li>• Implemented CI/CD pipelines improving deployment efficiency by 60%</li>
+              <li>• Developed custom CMS solutions with modern tech stack</li>
+              <li>• Maintained 99.9% uptime for production applications</li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl border border-gray-200">
+            <div class="flex items-start justify-between mb-4">
+              <div>
+                <h3 class="text-xl font-bold">Junior Developer</h3>
+                <p class="text-gray-600">Startup Labs</p>
+              </div>
+              <span class="text-sm text-gray-500">2016 - 2018</span>
+            </div>
+            <ul class="space-y-2 text-gray-600">
+              <li>• Contributed to rapid MVP development for startup projects</li>
+              <li>• Learned modern development practices and agile methodologies</li>
+              <li>• Built responsive web applications using Vue.js and Laravel</li>
+              <li>• Participated in code reviews and team knowledge sharing</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="mb-20">
+        <h2 class="text-3xl font-bold mb-8">Core Competencies</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <span class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </span>
+              Full Stack Development
+            </h3>
+            <p class="text-gray-600">
+              Expert in building end-to-end web applications with modern frameworks and best practices. 
+              Proficient in both frontend and backend technologies.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <span class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </span>
+              Technical Leadership
+            </h3>
+            <p class="text-gray-600">
+              Experience leading development teams, conducting code reviews, and establishing coding standards 
+              that ensure quality and maintainability.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <span class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                </svg>
+              </span>
+              Product Strategy
+            </h3>
+            <p class="text-gray-600">
+              Ability to translate business requirements into technical solutions, define product roadmaps, 
+              and make data-driven decisions that align with company goals.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-4 flex items-center">
+              <span class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+                <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </span>
+              Performance Optimization
+            </h3>
+            <p class="text-gray-600">
+              Skilled in identifying bottlenecks, optimizing database queries, implementing caching strategies, 
+              and ensuring applications run efficiently at scale.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education & Certifications -->
+      <div>
+        <h2 class="text-3xl font-bold mb-8">Education & Certifications</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-2">Bachelor of Computer Science</h3>
+            <p class="text-gray-600 mb-2">University of Technology Malaysia</p>
+            <p class="text-sm text-gray-500">2012 - 2016</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-2">AWS Certified Developer</h3>
+            <p class="text-gray-600 mb-2">Amazon Web Services</p>
+            <p class="text-sm text-gray-500">2022</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-2">Professional Scrum Master</h3>
+            <p class="text-gray-600 mb-2">Scrum.org</p>
+            <p class="text-sm text-gray-500">2021</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-gray-200">
+            <h3 class="text-xl font-bold mb-2">MongoDB Certified Developer</h3>
+            <p class="text-gray-600 mb-2">MongoDB University</p>
+            <p class="text-sm text-gray-500">2020</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-4">Let's Build Something Amazing</h2>
+      <p class="text-xl text-gray-300 mb-8">I'm always interested in hearing about new projects and opportunities</p>
+      <a href="/contact.html" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition">
+        Get In Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2026 rdybmiharbi.</p>
+    </div>
+  </footer>
+</body>
+</html>
