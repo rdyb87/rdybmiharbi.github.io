@@ -68,6 +68,11 @@
  .bg-pattern {
    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 4px);
   }
+
+ .bg-brandPurple { background-color: #A78BFA; }
+ .bg-brandPink { background-color: #F472B6; }
+ .bg-brandGreen { background-color: #34D399; }
+ .border-brandDark { border-color: #1A202C; }	
 }
 
 /* 4. Custom Utilities */
