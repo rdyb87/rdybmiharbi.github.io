@@ -63,6 +63,11 @@
   .badge-neo {
     @apply inline-flex items-center gap-2 border-2 border-brandDark px-4 py-1 rounded-full shadow-neo bg-white font-bold text-xs uppercase tracking-widest;
   }
+
+	/* Diagonal stripe pattern for the project cards */
+ .bg-pattern {
+   background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 4px);
+  }
 }
 
 /* 4. Custom Utilities */
