@@ -7,3 +7,5 @@ src/generated/
 .env
 .vscode/
 .idea/
+src/blog/
+public/blog/posts.json

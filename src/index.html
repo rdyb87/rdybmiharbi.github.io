@@ -1,421 +1,363 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adib_Ibrahim</title>
-  <meta name="description" content="Full Stack Developer transforming ideas into reality">
-  <link rel="stylesheet" href="./css/style.css">
-  <script type="module" src="./js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RdybMiharbi - Bridging Product & Code</title>
+    <meta name="description" content="Selamat datang dan sila mengembara diblog ini. dimana ada kemahuan, disitu ada jalan.">
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-brandBg" x-data="{ mobileMenuOpen: false }">
+<body class="bg-[#fffdf5] text-slate-900 font-body selection:bg-violet-200">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex items-center justify-between relative z-50" x-data="{ mobileMenuOpen: false }">
+        <a href="/" class="text-2xl font-black text-slate-900 tracking-tighter border-4 border-slate-900 px-4 py-2 bg-white shadow-hard">
+            Rdyb<span class="text-violet-500">Miharbi</span>
+        </a>
 
-<header class="bg-brandBg header-border sticky top-0 z-50" x-data="{ open: false }">
-  <div class="container-custom py-4 flex justify-between items-center">
-    
-    <div class="px-5 py-1.5 border-2 border-brandDark rounded-full shadow-neo bg-white">
-      <span class="font-extrabold text-xl tracking-tight">RdybMiharbi</span>
-    </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Home</a>
+            <a href="/portfolio.html" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Portfolio</a>
+            <a href="/blog.html" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Blog</a>
+            <a href="/contact.html" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Contact</a>
 
-    <nav class="hidden md:flex items-center space-x-8">
-      <a href="/" class="font-bold text-sm uppercase tracking-widest text-brandPurple">Home</a>
-	  <a href="/blog.html" class="font-bold text-sm uppercase tracking-widest text-brandDark">Blog</a>
-      <a href="/about.html" class="font-bold text-sm uppercase tracking-widest text-gray-500 hover:text-brandDark">About</a>
-	  <a href="/contact.html" class="font-bold text-sm uppercase tracking-widest text-gray-500 hover:text-brandDark">Contact</a>
-      <div class="flex space-x-3 ml-4">
-        <a href="#" class="icon-btn"> </a>
-        <a href="#" class="icon-btn"> </a>
-      </div>
+            <div class="flex items-center space-x-4 ml-4 pl-4 border-l-2 border-slate-200">
+                <a href="https://github.com/rdybmiharbi" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white border-2 border-slate-900 rounded-lg shadow-hard hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/rdybmiharbi" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white border-2 border-slate-900 rounded-lg shadow-hard hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="absolute top-24 left-6 right-6 bg-white border-4 border-slate-900 rounded-2xl shadow-hard p-6 flex flex-col space-y-4 md:hidden">
+            <a href="/" class="font-bold text-xl text-slate-900">Home</a>
+            <a href="/portfolio.html" class="font-bold text-xl text-slate-900">Portfolio</a>
+            <a href="/blog.html" class="font-bold text-xl text-slate-900">Blog</a>
+            <a href="/contact.html" class="font-bold text-xl text-slate-900">Contact</a>
+        </div>
     </nav>
 
-    <button @click="open = !open" class="md:hidden p-2 border-2 border-brandDark rounded-lg bg-white shadow-neo">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
-    </button>
-  </div>
-  
-  <div x-show="open" class="md:hidden bg-brandBg border-t-2 border-brandDark p-6 space-y-4">
-    <a href="#" class="block font-bold uppercase">Home</a>
-    <a href="#" class="block font-bold uppercase">Portfolio</a>
-  </div>
-</header>
-
-<section class="bg-brandBg py-20 overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
-    
-    <div>
-      <div class="inline-flex items-center gap-2 border-2 border-brandDark px-4 py-1 rounded-full shadow-neo mb-10 bg-white">
-        <span class="w-3 h-3 bg-purple-600 rounded-full animate-pulse"></span>
-        <span class="font-bold text-xs uppercase tracking-widest">Open for Work</span>
-      </div>
-      
-      <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight mb-8">
-        Bridging<br>
-        <span class="text-highlight italic">Product</span> &<br>
-        Code
-      </h1>
-      
-      <p class="text-xl text-gray-700 max-w-lg leading-relaxed">
-        Selamat datang dan sila mengembara diblog ini. <span class="font-bold">dimana ada kemahuan, disitu ada jalan.</span>
-      </p>
-    </div>
-
-    <div class="relative flex justify-center lg:justify-end">
-      <div class="absolute inset-0 bg-[radial-gradient(#e5e7eb_2px,transparent_2px)] [background-size:16px_16px] rounded-full scale-110"></div>
-      
-      <div class="relative group">
-        <div class="w-[400px] h-[450px] border-4 border-brandDark shadow-neo overflow-hidden transition-transform duration-500 group-hover:-rotate-2" 
-             style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;">
-          <img src="/images/profile.jpg" alt="Profile" class="w-full h-full object-cover">
-        </div>
-        
-        <div class="absolute -top-4 -right-4 w-12 h-12 bg-white border-2 border-brandDark rounded-full shadow-neo flex items-center justify-center transition-transform group-hover:scale-110">
-          <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-</section>
-
-  <!-- Hero Section -->
-  <section class="py-24 bg-brandBg">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      
-      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
-        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPurple rounded-t-[10px] border-b-2 border-brandDark"></div>
-        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-brandPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-        </div>
-        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Product Strategy</h3>
-        <p class="text-gray-600 text-center leading-relaxed">Defining roadmaps, prioritizing features, and aligning technical solutions with business goals and user needs.</p>
-      </div>
-
-      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
-        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPink rounded-t-[10px] border-b-2 border-brandDark"></div>
-        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>
-        </div>
-        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Technical Leadership</h3>
-        <p class="text-gray-600 text-center leading-relaxed">Leading cross-functional teams, making architectural decisions, and driving technical excellence across projects.</p>
-      </div>
-
-      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
-        <div class="absolute top-0 left-0 right-0 h-4 bg-brandYellow rounded-t-[10px] border-b-2 border-brandDark"></div>
-        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-brandYellow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        </div>
-        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Hands-On Development</h3>
-        <p class="text-gray-600 text-center leading-relaxed">Building production-ready applications from frontend to backend, ensuring quality through code and execution.</p>
-      </div>
-
-      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
-        <div class="absolute top-0 left-0 right-0 h-4 bg-brandGreen rounded-t-[10px] border-b-2 border-brandDark"></div>
-        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-        </div>
-        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Data-Driven Decisions</h3>
-        <p class="text-gray-600 text-center leading-relaxed">Leveraging analytics, user research, and metrics to validate assumptions and guide product iterations.</p>
-      </div>
-
-      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
-        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPurple rounded-t-[10px] border-b-2 border-brandDark"></div>
-        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-brandPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
-        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">Stakeholder Communication</h3>
-        <p class="text-gray-600 text-center leading-relaxed">Translating complex technical concepts into clear business value, aligning diverse teams toward shared vision.</p>
-      </div>
-
-      <div class="relative group bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[8px_8px_0px_0px_#1A202C]">
-        <div class="absolute top-0 left-0 right-0 h-4 bg-brandPink rounded-t-[10px] border-b-2 border-brandDark"></div>
-        <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-2 border-brandDark rounded-full flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-          <svg class="w-6 h-6 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        </div>
-        <h3 class="text-xl font-extrabold text-center mb-4 mt-2">User-Centric Mindset</h3>
-        <p class="text-gray-600 text-center leading-relaxed">Deeply understanding user pain points, conducting empathy-driven discovery, and building products that solve real problems.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-  <!-- What I Bring Section -->
-  <section class="py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4">What I Bring</h2>
-        <p class="text-xl text-gray-600">The unique blend of product strategy and technical execution.</p>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl">
-          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Product Strategy</h3>
-          <p class="text-gray-600">
-            Defining roadmaps, prioritizing features, and aligning technical solutions with business goals and user needs.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl">
-          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Technical Leadership</h3>
-          <p class="text-gray-600">
-            Leading cross-functional teams, making architectural decisions, and driving technical excellence across projects.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl">
-          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Hands-On Development</h3>
-          <p class="text-gray-600">
-            Building production-ready applications from frontend to backend, ensuring quality through code and execution.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl">
-          <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Data-Driven Decisions</h3>
-          <p class="text-gray-600">
-            Leveraging analytics, user research, and metrics to validate assumptions and guide product iterations with measurable impact.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl">
-          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Stakeholder Communication</h3>
-          <p class="text-gray-600">
-            Translating complex technical concepts into clear business value, aligning diverse teams toward shared product vision.
-          </p>
-        </div>
-
-        <div class="bg-white p-8 rounded-xl">
-          <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold mb-3">User-Centric Mindset</h3>
-          <p class="text-gray-600">
-            Deeply understanding user pain points, conducting empathy-driven discovery, and building products that solve real problems.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Work -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-12">
-        <div>
-          <h2 class="text-4xl font-bold mb-2">Featured Work</h2>
-          <p class="text-xl text-gray-600">Products I've built and shipped, from initial strategy to final deployment.</p>
-        </div>
-        <a href="/portfolio.html" class="hidden md:inline-block text-gray-900 font-medium hover:underline">
-          View All
-        </a>
-      </div>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project 1 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-blue-500 to-purple-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">AI Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">E-Commerce Platform</h3>
-            <p class="text-gray-600 mb-4">
-              Full-stack e-commerce solution with modern UI and seamless checkout experience.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">React</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Node.js</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MongoDB</span>
+    <!-- Hero Section -->
+    <main class="container mx-auto px-6 py-12 md:py-24">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="inline-flex items-center px-4 py-2 bg-white border-4 border-slate-900 rounded-full shadow-hard mb-8">
+                    <span class="w-3 h-3 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+                    <span class="text-sm font-bold text-slate-900 uppercase tracking-wider">Open for Work</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black text-slate-900 leading-tight mb-6">
+                    Bridging <br>
+                    <span class="bg-pink-400 text-white px-4 inline-block transform -rotate-2 border-4 border-slate-900 shadow-hard">Product</span> <br>
+                    & Code
+                </h1>
+                <p class="text-xl text-slate-600 font-bold mb-10 leading-relaxed max-w-lg">
+                    Selamat datang dan sila mengembara diblog ini. <br>
+                    <span class="text-slate-900">dimana ada kemahuan, disitu ada jalan.</span>
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/portfolio.html" class="inline-flex items-center px-8 py-4 bg-violet-500 text-white font-bold rounded-xl border-4 border-slate-900 shadow-hard hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                        View My Work
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                    <a href="/contact.html" class="px-8 py-4 bg-white text-slate-900 font-bold rounded-xl border-4 border-slate-900 shadow-hard hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                        Contact Me
+                    </a>
+                </div>
             </div>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Web App</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">Task Management System</h3>
-            <p class="text-gray-600 mb-4">
-              Collaborative project management tool with real-time updates and team features.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Vue.js</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">PostgreSQL</span>
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-full h-full bg-quaternary rounded-[40px] border-4 border-slate-900 -z-10"></div>
+                <div class="relative bg-white border-4 border-slate-900 rounded-[40px] overflow-hidden shadow-hard aspect-square">
+                    <img src="/images/profile.jpg" alt="RdybMiharbi" class="w-full h-full object-cover">
+                    <!-- Decorative sticker -->
+                    <div class="absolute -top-4 -right-4 w-12 h-12 bg-pink-400 border-4 border-slate-900 rounded-xl shadow-hard flex items-center justify-center -rotate-12 hover:rotate-0 transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- Irregular shape background -->
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400 border-4 border-slate-900 rounded-full -z-10 animate-bounce"></div>
             </div>
-          </div>
-        </article>
+        </section>
 
-        <!-- Project 3 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Developer Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">API Documentation Generator</h3>
-            <p class="text-gray-600 mb-4">
-              Automated API documentation tool with interactive testing capabilities.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TypeScript</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Express</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Swagger</span>
+        <!-- Services Section -->
+        <section class="py-24">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+                    What I
+                    <span class="relative">
+                        Bring
+                        <span class="absolute -bottom-2 left-0 w-full h-3 bg-pink-400 -z-10"></span>
+                    </span>
+                </h2>
+                <p class="text-slate-600 font-bold max-w-2xl mx-auto">The unique blend of product strategy and technical execution.</p>
             </div>
-          </div>
-        </article>
-      </div>
 
-      <div class="text-center mt-8">
-        <a href="/portfolio.html" class="md:hidden inline-block text-gray-900 font-medium hover:underline">
-          View All Projects
-        </a>
-      </div>
-    </div>
-  </section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Service 1 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl p-8 shadow-hard hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all relative group">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-white border-4 border-slate-900 rounded-xl flex items-center justify-center shadow-hard group-hover:shadow-none transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                        </svg>
+                    </div>
+                    <div class="mt-4 border-t-4 border-violet-400 pt-6">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 text-center">Product Strategy</h3>
+                        <p class="text-slate-600 font-medium leading-relaxed text-center">Defining roadmaps, prioritizing features, and aligning technical solutions with business goals and user needs.</p>
+                    </div>
+                </div>
 
-  <!-- Latest Posts -->
-  <section class="py-20 bg-gray-50" x-data="featuredPosts">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-end justify-between mb-12">
-        <div>
-          <h2 class="text-4xl font-bold mb-2">Latest from the Blog</h2>
-          <p class="text-xl text-gray-600">Insights on product strategy, technical leadership, and building software that matters.</p>
-        </div>
-        <a href="/blog.html" class="hidden md:inline-block text-gray-900 font-medium hover:underline">
-          View All
-        </a>
-      </div>
-      
-      <div x-show="loading" class="text-center py-12">
-        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
-      </div>
-      
-      <div x-show="!loading" class="grid md:grid-cols-3 gap-6">
-        <template x-for="post in posts" :key="post.slug">
-          <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group cursor-pointer" @click="window.location.href = `/blog/${post.slug}.html`">
-            <div class="aspect-video bg-gray-200">
-              <img :src="post.image" :alt="post.title" class="w-full h-full object-cover">
+                <!-- Service 2 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl p-8 shadow-hard hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all relative group">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-white border-4 border-slate-900 rounded-xl flex items-center justify-center shadow-hard group-hover:shadow-none transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <div class="mt-4 border-t-4 border-pink-400 pt-6">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 text-center">Technical Leadership</h3>
+                        <p class="text-slate-600 font-medium leading-relaxed text-center">Leading cross-functional teams, making architectural decisions, and driving technical excellence across projects.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl p-8 shadow-hard hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all relative group">
+                    <div class="absolute -top-6 left-8 w-12 h-12 bg-white border-4 border-slate-900 rounded-xl flex items-center justify-center shadow-hard group-hover:shadow-none transition-all">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="mt-4 border-t-4 border-yellow-400 pt-6">
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 text-center">Hands-On Development</h3>
+                        <p class="text-slate-600 font-medium leading-relaxed text-center">Building production-ready applications from frontend to backend, ensuring quality through code and execution.</p>
+                    </div>
+                </div>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2 text-xs text-gray-500 mb-2">
-                <span class="uppercase font-medium" x-text="post.category"></span>
-              </div>
-              <div class="text-sm text-gray-500 mb-2" x-text="post.date"></div>
-              <h3 class="text-xl font-bold mb-2 group-hover:text-blue-600" x-text="post.title"></h3>
-              <p class="text-gray-600 mb-4 line-clamp-2" x-text="post.excerpt"></p>
-              <span class="text-blue-600 font-medium text-sm">Read Article</span>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="py-24">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-4xl font-black text-slate-900">
+                    Featured
+                    <span class="relative">
+                        Work
+                        <span class="absolute -bottom-2 left-0 w-full h-3 bg-pink-400 -z-10"></span>
+                    </span>
+                </h2>
+                <a href="/portfolio.html" class="group flex items-center font-bold text-slate-900 hover:text-violet-500 transition-colors">
+                    View All
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
             </div>
-          </article>
-        </template>
-      </div>
 
-      <div class="text-center mt-8">
-        <a href="/blog.html" class="md:hidden inline-block text-gray-900 font-medium hover:underline">
-          View All Posts
-        </a>
-      </div>
-    </div>
-  </section>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl overflow-hidden shadow-hard group hover:-translate-y-2 transition-all">
+                    <div class="h-56 bg-emerald-400 border-b-4 border-slate-900 p-8 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 20px 20px;"></div>
+                        <h3 class="text-2xl font-black text-slate-900 text-center relative z-10">Kafkai V3 - Advanced Keyword Analysis</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 font-medium mb-6">Advanced keyword analysis and competitor insights to deliver proven SEO strategies.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">HTMX</span>
+                            <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">TailwindCSS</span>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Technical Toolkit -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold mb-4">Technical Toolkit</h2>
-        <p class="text-xl text-gray-600">The technical stack I leverage to ship products from concept to deployment.</p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-12">
-        <div>
-          <h3 class="text-2xl font-bold mb-6">Frontend</h3>
-          <div class="flex flex-wrap gap-3">
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">HTML5</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">CSS3</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">JavaScript</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">TypeScript</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Vue.js</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">React</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Next.js</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Nuxt.js</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Tailwind CSS</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Alpine.js</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">HTMX</span>
-          </div>
+                <!-- Project 2 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl overflow-hidden shadow-hard group hover:-translate-y-2 transition-all">
+                    <div class="h-56 bg-violet-400 border-b-4 border-slate-900 p-8 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, #000, #000 2px, transparent 2px, transparent 10px);"></div>
+                        <h3 class="text-2xl font-black text-white text-center relative z-10">Kafkai - AI Content Writer</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 font-medium mb-6">Powerful and easy to use AI Content Writer for high-quality posts.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">NextJs</span>
+                            <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">Django</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl overflow-hidden shadow-hard group hover:-translate-y-2 transition-all">
+                    <div class="h-56 bg-pink-400 border-b-4 border-slate-900 p-8 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(0deg, #000 2px, transparent 2px); background-size: 100% 20px;"></div>
+                        <h3 class="text-2xl font-black text-white text-center relative z-10">GetOTP</h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-slate-600 font-medium mb-6">OTP as a Service providing seamless verification for developers.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">Alpine</span>
+                            <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">HTMX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="py-24">
+            <div class="flex items-center justify-between mb-12">
+                <h2 class="text-4xl font-black text-slate-900">
+                    Latest from the
+                    <span class="relative">
+                        Blog
+                        <span class="absolute -bottom-2 left-0 w-full h-3 bg-yellow-400 -z-10"></span>
+                    </span>
+                </h2>
+                <a href="/blog.html" class="group flex items-center font-bold text-slate-900 hover:text-violet-500 transition-colors">
+                    View All
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl shadow-hard overflow-hidden group">
+                    <div class="relative h-64 bg-slate-100 border-b-4 border-slate-900">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Blog Post" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="px-3 py-1 bg-yellow-400 text-slate-900 text-xs font-black uppercase border-2 border-slate-900 rounded-full">Development</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-sm font-bold text-slate-500 mb-2">2026-01-20</p>
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-violet-500 transition-colors">Getting Started with Modern Web Development</h3>
+                        <p class="text-slate-600 font-medium mb-6">An introduction to building modern web applications with the latest tools and frameworks.</p>
+                        <a href="/blog/getting-started.html" class="inline-flex items-center font-bold text-slate-900 group-hover:text-violet-500">
+                            Read Article
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="bg-white border-4 border-slate-900 rounded-3xl shadow-hard overflow-hidden group">
+                    <div class="relative h-64 bg-slate-100 border-b-4 border-slate-900">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Blog Post" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="px-3 py-1 bg-emerald-400 text-slate-900 text-xs font-black uppercase border-2 border-slate-900 rounded-full">Backend</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-sm font-bold text-slate-500 mb-2">2026-01-15</p>
+                        <h3 class="text-2xl font-black text-slate-900 mb-4 group-hover:text-violet-500 transition-colors">Building Scalable REST APIs with Node.js</h3>
+                        <p class="text-slate-600 font-medium mb-6">Learn the best practices for building scalable and maintainable REST APIs using Node.js and Express.</p>
+                        <a href="/blog/scalable-apis.html" class="inline-flex items-center font-bold text-slate-900 group-hover:text-violet-500">
+                            Read Article
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolkit Section -->
+        <section class="py-24 text-center">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-16">
+                Technical
+                <span class="relative">
+                    Toolkit
+                    <span class="absolute -bottom-2 left-0 w-full h-3 bg-emerald-400 -z-10"></span>
+                </span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="bg-white border-4 border-slate-900 rounded-3xl p-8 shadow-hard">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-violet-100 border-2 border-slate-900 rounded-xl flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">HTML5</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">CSS3</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">JavaScript</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Vue.js</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="bg-white border-4 border-slate-900 rounded-3xl p-8 shadow-hard">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-pink-100 border-2 border-slate-900 rounded-xl flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900">Backend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">PHP</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Laravel</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Django</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">MySQL</span>
+                    </div>
+                </div>
+
+                <div class="bg-white border-4 border-slate-900 rounded-3xl p-8 shadow-hard">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-yellow-100 border-2 border-slate-900 rounded-xl flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-slate-900">Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Git</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Docker</span>
+                        <span class="px-3 py-1 bg-white border-2 border-slate-900 rounded-full text-sm font-bold">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="mt-20 bg-emerald-400 border-4 border-slate-900 rounded-3xl p-12 text-center shadow-hard relative overflow-hidden">
+            <div class="absolute -top-10 -left-10 w-32 h-32 bg-white opacity-20 rounded-full"></div>
+            <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-white opacity-20 rounded-full"></div>
+            <h2 class="text-4xl md:text-5xl font-black text-slate-900 mb-8 relative z-10">Ready to turn your vision <br> <span class="text-white underline decoration-white underline-offset-8">INTO REALITY?</span></h2>
+            <a href="/contact.html" class="inline-block px-10 py-5 bg-white text-slate-900 font-black text-xl rounded-2xl border-4 border-slate-900 shadow-hard hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all relative z-10">
+                Let's Talk
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t-4 border-slate-900 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-slate-900">&copy; 2026 RdybMiharbi.</p>
         </div>
-
-        <div>
-          <h3 class="text-2xl font-bold mb-6">Backend</h3>
-          <div class="flex flex-wrap gap-3">
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">PHP</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Laravel</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Python</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Django</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Node.js</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Express</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">MySQL</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">PostgreSQL</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">MongoDB</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Redis</span>
-          </div>
-        </div>
-
-        <div>
-          <h3 class="text-2xl font-bold mb-6">Tools & More</h3>
-          <div class="flex flex-wrap gap-3">
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Git & GitHub</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Docker</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Vite</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Figma</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Postman</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">CI/CD</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">Linux</span>
-            <span class="px-4 py-2 bg-gray-100 text-gray-800 rounded-lg">AWS</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-20 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Ready to turn your vision INTO REALITY?</h2>
-      <a href="/contact.html" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition mt-8">
-        Let's Talk
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p>© 2026 rdybmiharbi.</p>
-    </div>
-  </footer>
+    </footer>
 </body>
 </html>

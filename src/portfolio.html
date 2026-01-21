@@ -1,250 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - rdybmiharbi</title>
-  <meta name="description" content="Featured projects and work samples">
-  <link rel="stylesheet" href="/css/style.css">
-  <script type="module" src="/js/main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - RdybMiharbi</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-50">
-  <!-- Navigation -->
-  <nav class="bg-white sticky top-0 z-50 shadow-sm" x-data="navigation">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <a href="/" class="text-xl font-bold">rdybmiharbi</a>
-        
+<body class="bg-[#fffdf5] text-slate-900 font-body selection:bg-violet-200">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex items-center justify-between relative z-50" x-data="{ mobileMenuOpen: false }">
+        <a href="/" class="text-2xl font-black text-slate-900 tracking-tighter border-4 border-slate-900 px-4 py-2 bg-white shadow-hard">
+            Rdyb<span class="text-violet-500">Miharbi</span>
+        </a>
+
+        <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="/" class="text-gray-600 hover:text-gray-900">Home</a>
-          <a href="/portfolio.html" class="text-gray-900 font-medium">Portfolio</a>
-          <a href="/blog.html" class="text-gray-600 hover:text-gray-900">Blog</a>
-          <a href="/contact.html" class="text-gray-600 hover:text-gray-900">Contact</a>
+            <a href="/" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Home</a>
+            <a href="/portfolio.html" class="font-bold text-slate-900 hover:text-violet-500 transition-colors underline decoration-violet-500 underline-offset-8 decoration-4">Portfolio</a>
+            <a href="/blog.html" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Blog</a>
+            <a href="/contact.html" class="font-bold text-slate-900 hover:text-violet-500 transition-colors">Contact</a>
+
+            <div class="flex items-center space-x-4 ml-4 pl-4 border-l-2 border-slate-200">
+                <a href="https://github.com/rdybmiharbi" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white border-2 border-slate-900 rounded-lg shadow-hard hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/rdybmiharbi" target="_blank" class="w-10 h-10 flex items-center justify-center bg-white border-2 border-slate-900 rounded-lg shadow-hard hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+            </div>
         </div>
-        
-        <button @click="toggleMobileMenu" class="md:hidden p-2">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
         </button>
-      </div>
-      
-      <div x-show="mobileMenuOpen" @click.away="closeMobileMenu" class="md:hidden pb-4 border-t">
-        <a href="/" class="block py-3 text-gray-600">Home</a>
-        <a href="/portfolio.html" class="block py-3 text-gray-900 font-medium">Portfolio</a>
-        <a href="/blog.html" class="block py-3 text-gray-600">Blog</a>
-        <a href="/contact.html" class="block py-3 text-gray-600">Contact</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- Header -->
-  <section class="bg-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-5xl font-bold mb-4">Portfolio</h1>
-      <p class="text-xl text-gray-600">A collection of projects I've built and shipped</p>
-    </div>
-  </section>
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false" class="absolute top-24 left-6 right-6 bg-white border-4 border-slate-900 rounded-2xl shadow-hard p-6 flex flex-col space-y-4 md:hidden">
+            <a href="/" class="font-bold text-xl text-slate-900">Home</a>
+            <a href="/portfolio.html" class="font-bold text-xl text-slate-900">Portfolio</a>
+            <a href="/blog.html" class="font-bold text-xl text-slate-900">Blog</a>
+            <a href="/contact.html" class="font-bold text-xl text-slate-900">Contact</a>
+        </div>
+    </nav>
 
-  <!-- Filter -->
-  <section class="bg-white border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6" x-data="{ filter: 'all' }">
-      <div class="flex flex-wrap gap-3">
-        <button @click="filter = 'all'" :class="filter === 'all' ? 'bg-gray-900 text-white' : 'bg-white text-gray-700 border border-gray-300'" class="px-6 py-2 rounded-lg font-medium transition">
-          All
-        </button>
-        <button @click="filter = 'ai'" :class="filter === 'ai' ? 'bg-gray-900 text-white' : 'bg-white text-gray-700 border border-gray-300'" class="px-6 py-2 rounded-lg font-medium transition">
-          AI Tools
-        </button>
-        <button @click="filter = 'webapp'" :class="filter === 'webapp' ? 'bg-gray-900 text-white' : 'bg-white text-gray-700 border border-gray-300'" class="px-6 py-2 rounded-lg font-medium transition">
-          Web Apps
-        </button>
-        <button @click="filter = 'dev'" :class="filter === 'dev' ? 'bg-gray-900 text-white' : 'bg-white text-gray-700 border border-gray-300'" class="px-6 py-2 rounded-lg font-medium transition">
-          Developer Tools
-        </button>
-      </div>
-    </div>
-  </section>
+    <main class="container mx-auto px-6 py-12 md:py-24">
+        <div class="mb-16">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-6">
+                My <span class="relative">Work<span class="absolute -bottom-2 left-0 w-full h-3 bg-pink-400 -z-10"></span></span>
+            </h1>
+            <p class="text-xl text-slate-600 font-bold max-w-2xl">A collection of projects where I've blended product strategy with technical execution.</p>
+        </div>
 
-  <!-- Projects Grid -->
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- Project 1 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-blue-500 to-purple-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">AI Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">AI Content Writer</h3>
-            <p class="text-gray-600 mb-4">
-              Powerful and easy-to-use AI content writing tool leveraging advanced NLP models.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">NextJS</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TailwindCSS</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Project 1 -->
+            <div class="bg-white border-4 border-slate-900 rounded-3xl overflow-hidden shadow-hard group hover:-translate-y-2 transition-all">
+                <div class="h-56 bg-emerald-400 border-b-4 border-slate-900 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 20px 20px;"></div>
+                    <h3 class="text-2xl font-black text-slate-900 text-center relative z-10">Kafkai V3 - Advanced Keyword Analysis</h3>
+                </div>
+                <div class="p-8">
+                    <p class="text-slate-600 font-medium mb-6">Advanced keyword analysis and competitor insights to deliver proven SEO strategies.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">HTMX</span>
+                        <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">TailwindCSS</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </article>
 
-        <!-- Project 2 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-green-500 to-teal-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Web App</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">GetOTP - OTP Service</h3>
-            <p class="text-gray-600 mb-4">
-              GetOTP is an OTP as a Service that provides OTP for developers with easy integration.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">HTMX</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Alpine</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TailwindCSS</span>
+            <!-- Project 2 -->
+            <div class="bg-white border-4 border-slate-900 rounded-3xl overflow-hidden shadow-hard group hover:-translate-y-2 transition-all">
+                <div class="h-56 bg-violet-400 border-b-4 border-slate-900 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, #000, #000 2px, transparent 2px, transparent 10px);"></div>
+                    <h3 class="text-2xl font-black text-white text-center relative z-10">Kafkai - AI Content Writer</h3>
+                </div>
+                <div class="p-8">
+                    <p class="text-slate-600 font-medium mb-6">Powerful and easy to use AI Content Writer for high-quality posts.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">NextJs</span>
+                        <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">Django</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </article>
 
-        <!-- Project 3 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-orange-500 to-red-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Developer Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">FullStackMe Generator</h3>
-            <p class="text-gray-600 mb-4">
-              Generator to instantly generate Laravel API and Angular codes for rapid development.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Laravel</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Angular</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Bootstrap</span>
+            <!-- Project 3 -->
+            <div class="bg-white border-4 border-slate-900 rounded-3xl overflow-hidden shadow-hard group hover:-translate-y-2 transition-all">
+                <div class="h-56 bg-pink-400 border-b-4 border-slate-900 p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(0deg, #000 2px, transparent 2px); background-size: 100% 20px;"></div>
+                    <h3 class="text-2xl font-black text-white text-center relative z-10">GetOTP</h3>
+                </div>
+                <div class="p-8">
+                    <p class="text-slate-600 font-medium mb-6">OTP as a Service providing seamless verification for developers.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">Alpine</span>
+                        <span class="px-3 py-1 bg-slate-100 border-2 border-slate-900 rounded-lg text-xs font-bold uppercase">HTMX</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </article>
+        </div>
+    </main>
 
-        <!-- Project 4 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-purple-500 to-pink-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Web App</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">Plum - Project Management</h3>
-            <p class="text-gray-600 mb-4">
-              Plum is a custom Project Management Tool designed for startup teams and agile workflows.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">VueJS</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TailwindCSS</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-cyan-500 to-blue-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Developer Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">Tailwind Layout</h3>
-            <p class="text-gray-600 mb-4">
-              Tailwind Layout is a collection of useful TailwindCSS patterns and components.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TailwindCSS</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">NuxtJs</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-yellow-500 to-orange-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">AI Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">Keyword Analysis Tool</h3>
-            <p class="text-gray-600 mb-4">
-              Advanced keyword analysis and competitor insights to deliver proven SEO strategies.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">HTMX</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TailwindCSS</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Django</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 7 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-indigo-500 to-purple-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Web App</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">E-Commerce Platform</h3>
-            <p class="text-gray-600 mb-4">
-              Full-featured e-commerce platform with inventory management and payment integration.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">React</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Node.js</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MongoDB</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 8 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-pink-500 to-rose-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Developer Tool</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">API Documentation Portal</h3>
-            <p class="text-gray-600 mb-4">
-              Interactive API documentation with code examples and live testing capabilities.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">TypeScript</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Express</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Swagger</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 9 -->
-        <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition group">
-          <div class="aspect-video bg-gradient-to-br from-emerald-500 to-green-600"></div>
-          <div class="p-6">
-            <span class="text-xs font-medium text-gray-500 uppercase tracking-wide">Web App</span>
-            <h3 class="text-xl font-bold mt-2 mb-2 group-hover:text-blue-600">Social Media Dashboard</h3>
-            <p class="text-gray-600 mb-4">
-              Unified dashboard for managing multiple social media accounts with analytics.
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Vue.js</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">Laravel</span>
-              <span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">MySQL</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-20 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-4">Have a project in mind?</h2>
-      <p class="text-xl text-gray-300 mb-8">Let's work together to bring your ideas to life</p>
-      <a href="/contact.html" class="inline-block bg-white text-gray-900 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition">
-        Get In Touch
-      </a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <p>© 2026 rdybmiharbi.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="py-12 border-t-4 border-slate-900 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-bold text-slate-900">&copy; 2026 RdybMiharbi.</p>
+        </div>
+    </footer>
 </body>
 </html>
