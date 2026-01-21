@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} - rdybmiharbi</title>
+  <meta name="description" content="{{TITLE}}">
+  <script type="module" crossorigin src="/assets/main-B0ZUGrur.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-wPGYyxxR.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50" x-data="navigation">
+    <div class="container-custom">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="text-xl font-bold text-gray-900">rdybmiharbi</a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/blog.html" class="nav-link active">Blog</a>
+          <a href="/about.html" class="nav-link">About</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <button @click="toggleMobileMenu" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <div x-show="mobileMenuOpen" @click.away="closeMobileMenu" class="md:hidden pb-4 mobile-menu">
+        <a href="/" class="block py-2 nav-link">Home</a>
+        <a href="/blog.html" class="block py-2 nav-link active">Blog</a>
+        <a href="/about.html" class="block py-2 nav-link">About</a>
+        <a href="/contact.html" class="block py-2 nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <article class="py-12">
+    <div class="container-custom max-w-4xl">
+      <!-- Back Link -->
+      <a href="/blog.html" class="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Blog
+      </a>
+
+      <!-- Meta Info -->
+      <div class="mb-8">
+        <span class="badge">{{CATEGORY}}</span>
+        <div class="flex items-center text-gray-600 text-sm mt-4">
+          <span>{{DATE}}</span>
+          <span class="mx-2">•</span>
+          <span>{{READ_TIME}}</span>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl font-bold mb-8">{{TITLE}}</h1>
+
+      <!-- Featured Image -->
+      <div class="aspect-video bg-gray-200 rounded-xl mb-12 overflow-hidden">
+        <img src="{{IMAGE}}" alt="{{TITLE}}" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-lg max-w-none">
+        {{CONTENT}}
+      </div>
+
+      <!-- Share Section -->
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="text-lg font-bold mb-4">Share this article</h3>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-8">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <p class="text-gray-600 text-sm">© 2026 rdybmiharbi. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://github.com/rdybmiharbi" target="_blank" class="text-gray-600 hover:text-gray-900">GitHub</a>
+          <a href="https://linkedin.com/in/rdybmiharbi" target="_blank" class="text-gray-600 hover:text-gray-900">LinkedIn</a>
+          <a href="https://twitter.com/rdybmiharbi" target="_blank" class="text-gray-600 hover:text-gray-900">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

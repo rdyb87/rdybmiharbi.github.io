@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started with Modern Web Development - rdybmiharbi</title>
+  <meta name="description" content="{{TITLE}}">
+  <script type="module" crossorigin src="/assets/main-B0ZUGrur.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-wPGYyxxR.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50" x-data="navigation">
+    <div class="container-custom">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="text-xl font-bold text-gray-900">rdybmiharbi</a>
+        
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/blog.html" class="nav-link active">Blog</a>
+          <a href="/about.html" class="nav-link">About</a>
+          <a href="/contact.html" class="nav-link">Contact</a>
+        </div>
+        
+        <button @click="toggleMobileMenu" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <div x-show="mobileMenuOpen" @click.away="closeMobileMenu" class="md:hidden pb-4 mobile-menu">
+        <a href="/" class="block py-2 nav-link">Home</a>
+        <a href="/blog.html" class="block py-2 nav-link active">Blog</a>
+        <a href="/about.html" class="block py-2 nav-link">About</a>
+        <a href="/contact.html" class="block py-2 nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Article Header -->
+  <article class="py-12">
+    <div class="container-custom max-w-4xl">
+      <!-- Back Link -->
+      <a href="/blog.html" class="inline-flex items-center text-gray-600 hover:text-gray-900 mb-8">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Back to Blog
+      </a>
+
+      <!-- Meta Info -->
+      <div class="mb-8">
+        <span class="badge">Development</span>
+        <div class="flex items-center text-gray-600 text-sm mt-4">
+          <span>2026-01-20</span>
+          <span class="mx-2">•</span>
+          <span>2 min read</span>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h1 class="text-4xl md:text-5xl font-bold mb-8">{{TITLE}}</h1>
+
+      <!-- Featured Image -->
+      <div class="aspect-video bg-gray-200 rounded-xl mb-12 overflow-hidden">
+        <img src="/images/sample-post.jpg" alt="{{TITLE}}" class="w-full h-full object-cover">
+      </div>
+
+      <!-- Content -->
+      <div class="prose prose-lg max-w-none">
+        <h1>Getting Started with Modern Web Development</h1>
+<p>Welcome to the world of modern web development! In this post, we&#39;ll explore the essential tools and concepts you need to build amazing web applications.</p>
+<h2>Why Modern Web Development?</h2>
+<p>The web has evolved tremendously over the past few years. Modern frameworks and tools allow us to build:</p>
+<ul>
+<li>Fast, responsive applications</li>
+<li>Rich user experiences</li>
+<li>Scalable solutions</li>
+<li>Maintainable codebases</li>
+</ul>
+<h2>Essential Tools</h2>
+<p>Here are some tools every modern web developer should know:</p>
+<h3>Frontend</h3>
+<p>Modern frontend development revolves around component-based architectures. Popular frameworks include:</p>
+<ul>
+<li><strong>React</strong> - A JavaScript library for building user interfaces</li>
+<li><strong>Vue.js</strong> - The progressive JavaScript framework</li>
+<li><strong>Alpine.js</strong> - A lightweight JavaScript framework</li>
+</ul>
+<h3>Build Tools</h3>
+<p>Build tools help us optimize and bundle our code:</p>
+<pre><code class="language-javascript">// Example Vite configuration
+import { defineConfig } from &#39;vite&#39;;
+
+export default defineConfig({
+  root: &#39;src&#39;,
+  build: {
+    outDir: &#39;../dist&#39;
+  }
+});
+</code></pre>
+<h3>Styling</h3>
+<p>Modern CSS frameworks make styling easier:</p>
+<ul>
+<li><strong>Tailwind CSS</strong> - Utility-first CSS framework</li>
+<li><strong>PostCSS</strong> - Transform CSS with JavaScript</li>
+<li><strong>CSS Modules</strong> - Scoped CSS</li>
+</ul>
+<h2>Best Practices</h2>
+<p>When building modern web applications, keep these principles in mind:</p>
+<ol>
+<li><strong>Performance First</strong> - Optimize for speed and efficiency</li>
+<li><strong>Accessibility</strong> - Make your site usable for everyone</li>
+<li><strong>Responsive Design</strong> - Work on all screen sizes</li>
+<li><strong>SEO Friendly</strong> - Make your content discoverable</li>
+<li><strong>Clean Code</strong> - Write maintainable and readable code</li>
+</ol>
+<h2>Getting Started</h2>
+<p>To start your journey:</p>
+<ol>
+<li>Learn HTML, CSS, and JavaScript fundamentals</li>
+<li>Pick a modern framework</li>
+<li>Understand build tools</li>
+<li>Practice by building projects</li>
+<li>Stay updated with the ecosystem</li>
+</ol>
+<h2>Conclusion</h2>
+<p>Modern web development is exciting and constantly evolving. By mastering these tools and following best practices, you&#39;ll be well-equipped to build amazing applications.</p>
+<p>Happy coding!</p>
+
+      </div>
+
+      <!-- Share Section -->
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="text-lg font-bold mb-4">Share this article</h3>
+        <div class="flex gap-4">
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-8">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <p class="text-gray-600 text-sm">© 2026 rdybmiharbi. All rights reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://github.com/rdybmiharbi" target="_blank" class="text-gray-600 hover:text-gray-900">GitHub</a>
+          <a href="https://linkedin.com/in/rdybmiharbi" target="_blank" class="text-gray-600 hover:text-gray-900">LinkedIn</a>
+          <a href="https://twitter.com/rdybmiharbi" target="_blank" class="text-gray-600 hover:text-gray-900">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

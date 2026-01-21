@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - rdybmiharbi</title>
+  <meta name="description" content="Featured projects and work samples">
+  <script type="module" crossorigin src="/assets/main-B0ZUGrur.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-wPGYyxxR.css">
+</head>
+
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <!-- Navigation -->
+  <header class="bg-white border-b-4 border-brandDark sticky top-0 z-50" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div
+        class="px-5 py-2 border-4 border-brandDark rounded-full shadow-hard bg-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">
+        <span class="font-black text-2xl tracking-tight text-brandDark">RdybMiharbi</span>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">Home</a>
+        <a href="/blog.html"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">Blog</a>
+        <a href="/about.html"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">About</a>
+        <a href="/contact.html"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">Contact</a>
+        <div class="flex space-x-3 ml-4">
+          <a href="https://github.com/rdybmiharbi" target="_blank"
+            class="p-2 border-2 border-transparent hover:border-brandDark hover:shadow-hard rounded-lg transition-all text-brandDark">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/rdybmiharbi" target="_blank"
+            class="p-2 border-2 border-transparent hover:border-brandDark hover:shadow-hard rounded-lg transition-all text-blue-600">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/rdybmiharbi" target="_blank"
+            class="p-2 border-2 border-transparent hover:border-brandDark hover:shadow-hard rounded-lg transition-all text-sky-500">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <button @click="open = !open"
+        class="md:hidden p-2 border-4 border-brandDark rounded-lg bg-white shadow-hard active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <div x-show="open" x-cloak class="md:hidden bg-white border-t-4 border-brandDark p-6 space-y-4 shadow-xl">
+      <a href="/" class="block font-black uppercase text-xl hover:text-brandPurple">Home</a>
+      <a href="/portfolio.html"
+        class="block font-black uppercase text-xl hover:text-brandPurple text-brandPurple">Portfolio</a>
+      <a href="/blog.html" class="block font-black uppercase text-xl hover:text-brandPurple">Blog</a>
+      <a href="/about.html" class="block font-black uppercase text-xl hover:text-brandPurple">About</a>
+      <a href="/contact.html" class="block font-black uppercase text-xl hover:text-brandPurple">Contact</a>
+    </div>
+  </header>
+
+  <!-- Header -->
+  <!-- Header -->
+  <section class="bg-brandBg py-20 border-b-4 border-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter text-brandDark">Portfolio</h1>
+      <p class="text-2xl text-gray-600 font-medium max-w-2xl mx-auto">A collection of projects I've built and shipped
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter -->
+  <!-- Filter -->
+  <section class="bg-white border-b-4 border-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" x-data="{ filter: 'all' }">
+      <div class="flex flex-wrap gap-4 justify-center">
+        <button @click="filter = 'all'"
+          :class="filter === 'all' ? 'bg-brandDark text-white shadow-hard' : 'bg-white text-brandDark border-2 border-brandDark hover:bg-brandBg'"
+          class="px-8 py-3 rounded-lg font-black uppercase tracking-wider transition-all border-2 border-brandDark">
+          All
+        </button>
+        <button @click="filter = 'ai'"
+          :class="filter === 'ai' ? 'bg-brandDark text-white shadow-hard' : 'bg-white text-brandDark border-2 border-brandDark hover:bg-brandBg'"
+          class="px-8 py-3 rounded-lg font-black uppercase tracking-wider transition-all border-2 border-brandDark">
+          AI Tools
+        </button>
+        <button @click="filter = 'webapp'"
+          :class="filter === 'webapp' ? 'bg-brandDark text-white shadow-hard' : 'bg-white text-brandDark border-2 border-brandDark hover:bg-brandBg'"
+          class="px-8 py-3 rounded-lg font-black uppercase tracking-wider transition-all border-2 border-brandDark">
+          Web Apps
+        </button>
+        <button @click="filter = 'dev'"
+          :class="filter === 'dev' ? 'bg-brandDark text-white shadow-hard' : 'bg-white text-brandDark border-2 border-brandDark hover:bg-brandBg'"
+          class="px-8 py-3 rounded-lg font-black uppercase tracking-wider transition-all border-2 border-brandDark">
+          Developer Tools
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1 -->
+        <!-- Project 1 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-brandPurple border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              AI Writer</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">AI
+              Tool</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">AI Content Writer</h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Powerful and easy-to-use AI content writing tool leveraging advanced NLP models.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">NextJS</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">TailwindCSS</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Django</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-green-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              GetOTP</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Web
+              App</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">GetOTP - OTP Service
+            </h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              GetOTP is an OTP as a Service that provides OTP for developers with easy integration.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">HTMX</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Alpine</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Django</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">TailwindCSS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-orange-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              Generator</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Developer
+              Tool</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">FullStackMe Generator
+            </h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Generator to instantly generate Laravel API and Angular codes for rapid development.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Laravel</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Angular</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Bootstrap</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-purple-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              Plum</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Web
+              App</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">Plum - Project
+              Management</h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Plum is a custom Project Management Tool designed for startup teams and agile workflows.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">VueJS</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">TailwindCSS</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Django</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-cyan-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              Layout</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Developer
+              Tool</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">Tailwind Layout</h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Tailwind Layout is a collection of useful TailwindCSS patterns and components.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">TailwindCSS</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">NuxtJs</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-yellow-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              SEO Tool</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">AI
+              Tool</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">Keyword Analysis Tool
+            </h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Advanced keyword analysis and competitor insights to deliver proven SEO strategies.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">HTMX</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">TailwindCSS</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Django</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-indigo-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              Store</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Web
+              App</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">E-Commerce Platform</h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Full-featured e-commerce platform with inventory management and payment integration.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">React</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Node.js</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 8 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-pink-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              Docs</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Developer
+              Tool</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">API Documentation Portal
+            </h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Interactive API documentation with code examples and live testing capabilities.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">TypeScript</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Express</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Swagger</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 9 -->
+        <article class="neo-card overflow-hidden group hover:-translate-y-1 transition-all duration-300">
+          <div
+            class="aspect-video bg-emerald-500 border-b-4 border-brandDark relative flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-20"
+              style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 16px 16px;"></div>
+            <h3
+              class="text-4xl font-black text-white z-10 text-center px-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+              Dash</h3>
+          </div>
+          <div class="p-8">
+            <span
+              class="inline-block px-3 py-1 bg-brandYellow border-2 border-brandDark rounded-full text-xs font-black uppercase tracking-wide mb-4 shadow-[2px_2px_0_0_#1e293b]">Web
+              App</span>
+            <h3 class="text-2xl font-black mb-3 group-hover:text-brandPurple transition-colors">Social Media Dashboard
+            </h3>
+            <p class="text-gray-600 mb-6 font-medium leading-relaxed">
+              Unified dashboard for managing multiple social media accounts with analytics.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Vue.js</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">Laravel</span>
+              <span
+                class="px-3 py-1.5 bg-gray-100 border-2 border-gray-200 rounded text-xs font-bold uppercase">MySQL</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <!-- CTA Section -->
+  <section class="py-24 bg-brandDark text-white border-t-4 border-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-5xl md:text-6xl font-black mb-8 tracking-tighter">Have a project in mind?</h2>
+      <p class="text-2xl text-gray-300 mb-12 max-w-2xl mx-auto font-medium">Let's work together to bring your ideas to
+        life</p>
+      <a href="/contact.html"
+        class="inline-block bg-brandYellow text-brandDark px-10 py-5 rounded-xl font-black text-xl uppercase tracking-widest hover:bg-white hover:scale-105 transition-all shadow-[8px_8px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-none translate-x-[-4px] translate-y-[-4px] hover:translate-x-0 hover:translate-y-0">
+        Get In Touch
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="bg-white border-t-4 border-brandDark py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-black text-brandDark text-lg">© 2026 RdybMiharbi. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

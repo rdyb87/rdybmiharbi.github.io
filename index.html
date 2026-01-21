@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adib_Ibrahim</title>
+  <meta name="description" content="Full Stack Developer transforming ideas into reality">
+  <script type="module" crossorigin src="/assets/main-B0ZUGrur.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-wPGYyxxR.css">
+</head>
+
+<body class="bg-brandBg" x-data="{ mobileMenuOpen: false }">
+
+  <header class="bg-white border-b-4 border-brandDark sticky top-0 z-50" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+      <div
+        class="px-5 py-2 border-4 border-brandDark rounded-full shadow-hard bg-white hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all cursor-default">
+        <span class="font-black text-2xl tracking-tight text-brandDark">RdybMiharbi</span>
+      </div>
+
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/"
+          class="font-black text-sm uppercase tracking-widest text-brandPurple hover:text-brandDark transition-colors">Home</a>
+        <a href="/blog.html"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">Blog</a>
+        <a href="/about.html"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">About</a>
+        <a href="/contact.html"
+          class="font-black text-sm uppercase tracking-widest text-brandDark hover:text-brandPurple transition-colors">Contact</a>
+        <div class="flex space-x-3 ml-4">
+          <a href="https://github.com/rdybmiharbi" target="_blank"
+            class="p-2 border-2 border-transparent hover:border-brandDark hover:shadow-hard rounded-lg transition-all text-brandDark">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/rdybmiharbi" target="_blank"
+            class="p-2 border-2 border-transparent hover:border-brandDark hover:shadow-hard rounded-lg transition-all text-blue-600">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/rdybmiharbi" target="_blank"
+            class="p-2 border-2 border-transparent hover:border-brandDark hover:shadow-hard rounded-lg transition-all text-sky-500">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+
+      <button @click="open = !open"
+        class="md:hidden p-2 border-4 border-brandDark rounded-lg bg-white shadow-hard active:shadow-none active:translate-x-[2px] active:translate-y-[2px] transition-all">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <div x-show="open" x-cloak class="md:hidden bg-white border-t-4 border-brandDark p-6 space-y-4 shadow-xl">
+      <a href="/" class="block font-black uppercase text-xl hover:text-brandPurple">Home</a>
+      <a href="/blog.html" class="block font-black uppercase text-xl hover:text-brandPurple">Blog</a>
+      <a href="/about.html" class="block font-black uppercase text-xl hover:text-brandPurple">About</a>
+      <a href="/contact.html" class="block font-black uppercase text-xl hover:text-brandPurple">Contact</a>
+    </div>
+  </header>
+
+  <section class="bg-brandBg py-20 overflow-hidden min-h-[90vh] flex items-center">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
+
+      <div class="relative z-10">
+        <div
+          class="inline-flex items-center gap-2 border-4 border-brandDark px-6 py-2 rounded-full shadow-hard mb-10 bg-white">
+          <span class="w-3 h-3 bg-purple-600 rounded-full animate-pulse"></span>
+          <span class="font-black text-xs uppercase tracking-widest">Open for Work</span>
+        </div>
+
+        <h1 class="text-6xl lg:text-9xl font-black leading-none mb-8 tracking-tighter">
+          Bridging<br>
+          <span class="text-brandPurple italic rotate-2 inline-block">Product</span> &<br>
+          Code
+        </h1>
+
+        <p class="text-2xl text-brandDark max-w-lg leading-relaxed font-medium mb-10">
+          Selamat datang dan sila mengembara diblog ini. <span
+            class="font-black bg-yellow-200 px-2 rotate-1 inline-block border-2 border-brandDark">dimana ada kemahuan,
+            disitu ada jalan.</span>
+        </p>
+
+        <div class="flex gap-4">
+          <a href="#featured-work" class="btn-primary">
+            See My Work
+          </a>
+          <a href="/contact.html" class="btn-secondary">
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center lg:justify-end">
+        <div
+          class="absolute inset-0 bg-[radial-gradient(#cbd5e1_2px,transparent_2px)] [background-size:24px_24px] rounded-full scale-110 opacity-50">
+        </div>
+
+        <div class="relative group">
+          <div
+            class="w-[400px] h-[450px] border-4 border-brandDark shadow-neo-lg overflow-hidden transition-transform duration-500 group-hover:-rotate-2 bg-brandYellow"
+            style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;">
+            <img src="/images/profile.jpg" alt="Profile"
+              class="w-full h-full object-cover mix-blend-multiply filter grayscale hover:grayscale-0 transition-all duration-500">
+          </div>
+
+          <div
+            class="absolute -top-4 -right-4 w-16 h-16 bg-white border-4 border-brandDark rounded-full shadow-hard flex items-center justify-center transition-transform group-hover:scale-110 group-hover:rotate-12">
+            <svg class="w-8 h-8 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-24 bg-brandBg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <div class="neo-card p-8 pt-12 group">
+          <div class="absolute top-0 left-0 right-0 h-4 bg-brandPurple rounded-t-[10px] border-b-4 border-brandDark">
+          </div>
+          <div
+            class="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-white border-4 border-brandDark rounded-full flex items-center justify-center shadow-hard group-hover:scale-110 group-hover:rotate-12 transition-transform">
+            <svg class="w-8 h-8 text-brandPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-center mb-4 mt-4">Product Strategy</h3>
+          <p class="text-gray-600 text-center leading-relaxed font-medium">Defining roadmaps, prioritizing features, and
+            aligning technical solutions with business goals and user needs.</p>
+        </div>
+
+        <div class="neo-card p-8 pt-12 group">
+          <div class="absolute top-0 left-0 right-0 h-4 bg-brandPink rounded-t-[10px] border-b-4 border-brandDark">
+          </div>
+          <div
+            class="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-white border-4 border-brandDark rounded-full flex items-center justify-center shadow-hard group-hover:scale-110 group-hover:-rotate-12 transition-transform">
+            <svg class="w-8 h-8 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-center mb-4 mt-4">Technical Leadership</h3>
+          <p class="text-gray-600 text-center leading-relaxed font-medium">Leading cross-functional teams, making
+            architectural decisions, and driving technical excellence across projects.</p>
+        </div>
+
+        <div class="neo-card p-8 pt-12 group">
+          <div class="absolute top-0 left-0 right-0 h-4 bg-brandYellow rounded-t-[10px] border-b-4 border-brandDark">
+          </div>
+          <div
+            class="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-white border-4 border-brandDark rounded-full flex items-center justify-center shadow-hard group-hover:scale-110 group-hover:rotate-12 transition-transform">
+            <svg class="w-8 h-8 text-brandYellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-center mb-4 mt-4">Hands-On Development</h3>
+          <p class="text-gray-600 text-center leading-relaxed font-medium">Building production-ready applications from
+            frontend to backend, ensuring quality through code and execution.</p>
+        </div>
+
+        <div class="neo-card p-8 pt-12 group">
+          <div class="absolute top-0 left-0 right-0 h-4 bg-brandGreen rounded-t-[10px] border-b-4 border-brandDark">
+          </div>
+          <div
+            class="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-white border-4 border-brandDark rounded-full flex items-center justify-center shadow-hard group-hover:scale-110 group-hover:-rotate-12 transition-transform">
+            <svg class="w-8 h-8 text-brandGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-center mb-4 mt-4">Data-Driven Decisions</h3>
+          <p class="text-gray-600 text-center leading-relaxed font-medium">Leveraging analytics, user research, and
+            metrics to validate assumptions and guide product iterations.</p>
+        </div>
+
+        <div class="neo-card p-8 pt-12 group">
+          <div class="absolute top-0 left-0 right-0 h-4 bg-brandPurple rounded-t-[10px] border-b-4 border-brandDark">
+          </div>
+          <div
+            class="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-white border-4 border-brandDark rounded-full flex items-center justify-center shadow-hard group-hover:scale-110 group-hover:rotate-12 transition-transform">
+            <svg class="w-8 h-8 text-brandPurple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-center mb-4 mt-4">Stakeholder Communication</h3>
+          <p class="text-gray-600 text-center leading-relaxed font-medium">Translating complex technical concepts into
+            clear business value, aligning diverse teams toward shared vision.</p>
+        </div>
+
+        <div class="neo-card p-8 pt-12 group">
+          <div class="absolute top-0 left-0 right-0 h-4 bg-brandPink rounded-t-[10px] border-b-4 border-brandDark">
+          </div>
+          <div
+            class="absolute -top-6 left-1/2 -translate-x-1/2 w-16 h-16 bg-white border-4 border-brandDark rounded-full flex items-center justify-center shadow-hard group-hover:scale-110 group-hover:-rotate-12 transition-transform">
+            <svg class="w-8 h-8 text-brandPink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-black text-center mb-4 mt-4">User-Centric Mindset</h3>
+          <p class="text-gray-600 text-center leading-relaxed font-medium">Deeply understanding user pain points,
+            conducting empathy-driven discovery, and building products that solve real problems.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Bring Section -->
+  <section class="py-24 bg-brandBg border-t-4 border-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-black mb-4">What I Bring</h2>
+        <p class="text-xl text-gray-600 font-medium">The unique blend of product strategy and technical execution.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 border-4 border-brandDark rounded-xl shadow-hard hover:shadow-hard-hover hover:-translate-y-1 transition-all">
+          <div
+            class="w-16 h-16 bg-blue-100 border-4 border-brandDark rounded-lg flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1e293b]">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black mb-3">Product Strategy</h3>
+          <p class="text-gray-600 font-medium">
+            Defining roadmaps, prioritizing features, and aligning technical solutions with business goals and user
+            needs.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 border-4 border-brandDark rounded-xl shadow-hard hover:shadow-hard-hover hover:-translate-y-1 transition-all">
+          <div
+            class="w-16 h-16 bg-purple-100 border-4 border-brandDark rounded-lg flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1e293b]">
+            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black mb-3">Technical Leadership</h3>
+          <p class="text-gray-600 font-medium">
+            Leading cross-functional teams, making architectural decisions, and driving technical excellence across
+            projects.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 border-4 border-brandDark rounded-xl shadow-hard hover:shadow-hard-hover hover:-translate-y-1 transition-all">
+          <div
+            class="w-16 h-16 bg-green-100 border-4 border-brandDark rounded-lg flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1e293b]">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black mb-3">Hands-On Development</h3>
+          <p class="text-gray-600 font-medium">
+            Building production-ready applications from frontend to backend, ensuring quality through code and
+            execution.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 border-4 border-brandDark rounded-xl shadow-hard hover:shadow-hard-hover hover:-translate-y-1 transition-all">
+          <div
+            class="w-16 h-16 bg-yellow-100 border-4 border-brandDark rounded-lg flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1e293b]">
+            <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black mb-3">Data-Driven Decisions</h3>
+          <p class="text-gray-600 font-medium">
+            Leveraging analytics, user research, and metrics to validate assumptions and guide product iterations with
+            measurable impact.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 border-4 border-brandDark rounded-xl shadow-hard hover:shadow-hard-hover hover:-translate-y-1 transition-all">
+          <div
+            class="w-16 h-16 bg-red-100 border-4 border-brandDark rounded-lg flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1e293b]">
+            <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black mb-3">Stakeholder Communication</h3>
+          <p class="text-gray-600 font-medium">
+            Translating complex technical concepts into clear business value, aligning diverse teams toward shared
+            product vision.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 border-4 border-brandDark rounded-xl shadow-hard hover:shadow-hard-hover hover:-translate-y-1 transition-all">
+          <div
+            class="w-16 h-16 bg-indigo-100 border-4 border-brandDark rounded-lg flex items-center justify-center mb-6 shadow-[4px_4px_0px_0px_#1e293b]">
+            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-black mb-3">User-Centric Mindset</h3>
+          <p class="text-gray-600 font-medium">
+            Deeply understanding user pain points, conducting empathy-driven discovery, and building products that solve
+            real problems.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work -->
+  <section id="featured-work" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-16">
+        <div>
+          <h2 class="text-5xl font-black mb-4 text-brandDark">Featured Work</h2>
+          <p class="text-2xl text-gray-600 font-medium">Products I've built and shipped, from initial strategy to final
+            deployment.</p>
+        </div>
+        <a href="/portfolio.html"
+          class="hidden md:flex items-center text-brandPurple font-black hover:underline gap-2 text-xl">
+          View All <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Project 1 -->
+        <article
+          class="bg-white border-4 border-brandDark rounded-2xl overflow-hidden shadow-neo-lg hover:shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-300">
+          <div
+            class="h-64 p-8 relative flex items-center justify-center border-b-4 border-brandDark text-center bg-brandPurple"
+            style="background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 4px);">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white border-2 border-brandDark rounded-full text-[10px] font-black uppercase">
+              AI Tool</div>
+            <h3 class="text-white text-3xl font-black leading-tight drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">E-Commerce
+              Platform</h3>
+          </div>
+          <div class="p-8">
+            <h4 class="text-2xl font-black mb-3 leading-tight text-brandDark">Modern E-Commerce Solution</h4>
+            <p class="text-gray-600 text-base mb-6 font-medium">Full-stack e-commerce solution with modern UI and
+              seamless checkout experience.</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">React</span>
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">Node.js</span>
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article
+          class="bg-white border-4 border-brandDark rounded-2xl overflow-hidden shadow-neo-lg hover:shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-300">
+          <div
+            class="h-64 p-8 relative flex items-center justify-center border-b-4 border-brandDark text-center bg-brandPink"
+            style="background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 4px);">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white border-2 border-brandDark rounded-full text-[10px] font-black uppercase">
+              Web App</div>
+            <h3 class="text-white text-3xl font-black leading-tight drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">Task
+              Manager</h3>
+          </div>
+          <div class="p-8">
+            <h4 class="text-2xl font-black mb-3 leading-tight text-brandDark">Collaborative Tasks</h4>
+            <p class="text-gray-600 text-base mb-6 font-medium">Collaborative project management tool with real-time
+              updates and team features.</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">Vue.js</span>
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">Django</span>
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">PostgreSQL</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article
+          class="bg-white border-4 border-brandDark rounded-2xl overflow-hidden shadow-neo-lg hover:shadow-hard hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-300">
+          <div
+            class="h-64 p-8 relative flex items-center justify-center border-b-4 border-brandDark text-center bg-brandGreen"
+            style="background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 2px, transparent 2px, transparent 4px);">
+            <div
+              class="absolute top-4 right-4 px-3 py-1 bg-white border-2 border-brandDark rounded-full text-[10px] font-black uppercase">
+              Dev Tool</div>
+            <h3 class="text-white text-3xl font-black leading-tight drop-shadow-[2px_2px_0px_rgba(0,0,0,1)]">API Gen
+            </h3>
+          </div>
+          <div class="p-8">
+            <h4 class="text-2xl font-black mb-3 leading-tight text-brandDark">API Documentation</h4>
+            <p class="text-gray-600 text-base mb-6 font-medium">Automated API documentation tool with interactive
+              testing capabilities.</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">TypeScript</span>
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">Express</span>
+              <span
+                class="px-3 py-1 border-2 border-brandDark rounded-full text-xs font-bold bg-white shadow-[2px_2px_0px_0px_#1e293b]">Swagger</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/portfolio.html" class="md:hidden inline-block btn-secondary">
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Posts -->
+  <section class="py-24 bg-brandBg border-t-4 border-brandDark" x-data="featuredPosts">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-16">
+        <div>
+          <h2 class="text-4xl font-black mb-2 text-brandDark">Latest from the Blog</h2>
+          <p class="text-xl text-gray-600 font-medium">Insights on product strategy, technical leadership, and building
+            software
+            that matters.</p>
+        </div>
+        <a href="/blog.html"
+          class="hidden md:inline-block text-brandDark font-black hover:text-brandPurple transition-colors text-lg">
+          View All
+        </a>
+      </div>
+
+      <div x-show="loading" class="text-center py-12">
+        <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-brandDark border-t-brandPink"></div>
+      </div>
+
+      <div x-show="!loading" class="grid md:grid-cols-3 gap-8">
+        <template x-for="post in posts" :key="post.slug">
+          <article
+            class="bg-white border-4 border-brandDark rounded-xl overflow-hidden hover:shadow-hard transition-all group cursor-pointer hover:-translate-y-1"
+            @click="window.location.href = `/blog/${post.slug}.html`">
+            <div class="aspect-video bg-gray-200 border-b-4 border-brandDark relative overflow-hidden">
+              <img :src="post.image" :alt="post.title"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div
+                class="absolute top-4 left-4 px-3 py-1 bg-white border-2 border-brandDark rounded-full text-xs font-bold uppercase z-10"
+                x-text="post.category"></div>
+            </div>
+            <div class="p-6">
+              <div class="text-sm text-gray-500 mb-3 font-bold" x-text="post.date"></div>
+              <h3 class="text-xl font-black mb-3 group-hover:text-brandPurple leading-tight" x-text="post.title"></h3>
+              <p class="text-gray-600 mb-4 line-clamp-2 font-medium" x-text="post.excerpt"></p>
+              <span class="text-brandPurple font-black text-sm uppercase tracking-wide group-hover:underline">Read
+                Article</span>
+            </div>
+          </article>
+        </template>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/blog.html" class="md:hidden inline-block btn-secondary">
+          View All Posts
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Toolkit -->
+  <section class="py-24 bg-white border-t-4 border-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-black mb-4">Technical Toolkit</h2>
+        <p class="text-xl text-gray-600 font-medium">The technical stack I leverage to ship products from concept to
+          deployment.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <div
+          class="bg-brandBg p-8 border-4 border-brandDark rounded-xl shadow-hard hover:-translate-y-1 transition-transform">
+          <h3 class="text-2xl font-black mb-6 flex items-center gap-3">
+            <span class="w-3 h-3 bg-brandPurple rounded-full border-2 border-brandDark"></span> Frontend
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">HTML5</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">CSS3</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">JavaScript</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">TypeScript</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Vue.js</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">React</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Next.js</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Nuxt.js</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Tailwind
+              CSS</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Alpine.js</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">HTMX</span>
+          </div>
+        </div>
+
+        <div
+          class="bg-brandBg p-8 border-4 border-brandDark rounded-xl shadow-hard hover:-translate-y-1 transition-transform">
+          <h3 class="text-2xl font-black mb-6 flex items-center gap-3">
+            <span class="w-3 h-3 bg-brandPink rounded-full border-2 border-brandDark"></span> Backend
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">PHP</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Laravel</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Python</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Django</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Node.js</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Express</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">MySQL</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">PostgreSQL</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">MongoDB</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Redis</span>
+          </div>
+        </div>
+
+        <div
+          class="bg-brandBg p-8 border-4 border-brandDark rounded-xl shadow-hard hover:-translate-y-1 transition-transform">
+          <h3 class="text-2xl font-black mb-6 flex items-center gap-3">
+            <span class="w-3 h-3 bg-brandYellow rounded-full border-2 border-brandDark"></span> Tools & More
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Git
+              & GitHub</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Docker</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Vite</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Figma</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Postman</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">CI/CD</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">Linux</span>
+            <span
+              class="px-3 py-1.5 bg-white text-brandDark font-bold text-sm border-2 border-brandDark rounded-lg shadow-[2px_2px_0px_0px_#1e293b]">AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-brandDark text-white border-t-4 border-brandDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-5xl font-black mb-6">Ready to turn your vision INTO REALITY?</h2>
+      <a href="/contact.html"
+        class="inline-block bg-white text-brandDark text-xl font-black px-8 py-4 rounded-lg border-4 border-brandDark shadow-[4px_4px_0px_0px_#fff] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all mt-8">
+        Let's Talk
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2026 rdybmiharbi.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
