@@ -1,5 +1,5 @@
 /* 1. Imports */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,78 +8,34 @@
 /* 2. Base Styles */
 @layer base {
   body {
-    @apply bg-brandBg text-brandDark font-sans antialiased overflow-x-hidden;
+    @apply bg-background text-foreground font-body antialiased overflow-x-hidden;
   }
     
-  h1, h2, h3 {
-    @apply font-extrabold tracking-tight;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-black tracking-tight;
   }
 }
 
 /* 3. Component Classes */
 @layer components {
-	
-	.header-border {
-    @apply border-b-2 border-brandDark;
+  .shadow-hard {
+    @apply shadow-[4px_4px_0px_0px_#1e293b];
   }
   
-  .icon-btn {
-    @apply w-10 h-10 rounded-full border-2 border-brandDark bg-white flex items-center justify-center 
-           shadow-neo transition-all hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-neo-lg;
-  }
-  
-  
-  /* Slanted Pink Highlight */
-  .text-highlight {
-	@apply relative inline-block text-white px-2 py-1 transform -skew-x-12 bg-brandPink italic leading-none;
-  }
-  
-  /* Responsive Container */
-  .container-custom {
-    @apply max-w-7xl mx-auto px-6 sm:px-10 lg:px-16;
+  .shadow-hard-hover {
+    @apply shadow-[6px_6px_0px_0px_#1e293b];
   }
 
-  /* Neo-Brutalism Card Base Style */
-  .card-neo {
-    @apply bg-white border-2 border-brandDark rounded-xl shadow-neo p-8 pt-12 transition-all duration-300;
+  .shadow-hard-active {
+    @apply shadow-[2px_2px_0px_0px_#1e293b];
   }
 
-  /* Hover effect: Push up/left and increase shadow size */
-  .card-neo:hover {
-    @apply -translate-y-1 -translate-x-1 shadow-neo-lg;
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-white font-bold rounded-full border-2 border-border-dark shadow-hard hover:shadow-hard-hover active:shadow-hard-active hover:-translate-y-1 active:translate-y-0 transition-all duration-300;
   }
 
-  /* Neo-Brutalism Button Styles */
-  .btn-neo-primary {
-    @apply border-2 border-brandDark px-8 py-4 rounded-lg font-bold shadow-neo bg-brandDark text-white hover:bg-gray-800 transition-all active:translate-y-1 active:shadow-none;
-  }
-
-  .btn-neo-secondary {
-    @apply border-2 border-brandDark px-8 py-4 rounded-lg font-bold shadow-neo bg-white text-brandDark hover:bg-brandBg transition-all active:translate-y-1 active:shadow-none;
-  }
-
-  /* Badge with Neo-Brutalism Shadow */
-  .badge-neo {
-    @apply inline-flex items-center gap-2 border-2 border-brandDark px-4 py-1 rounded-full shadow-neo bg-white font-bold text-xs uppercase tracking-widest;
-  }
-
-	/* Diagonal stripe pattern for the project cards */
- .bg-pattern {
-   background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 4px);
-  }
-
- .bg-brandPurple { background-color: #A78BFA; }
- .bg-brandPink { background-color: #F472B6; }
- .bg-brandGreen { background-color: #34D399; }
- .border-brandDark { border-color: #1A202C; }	
-}
-
-/* 4. Custom Utilities */
-@layer utilities {
-  /* Custom border-radius for the profile image blob */
-  .rounded-blob {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent text-foreground font-bold rounded-full border-2 border-border-dark hover:bg-tertiary transition-colors duration-300;
   }
 }
 
@@ -89,15 +45,15 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-brandBg;
+  @apply bg-background;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-brandDark/20 rounded-full;
+  @apply bg-foreground/20 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-brandDark/40;
+  @apply bg-foreground/40;
 }
 
 /* Alpine.js cloak to prevent flicker on load */
@@ -105,18 +61,8 @@
   display: none !important; 
 }
 
-/* Mobile menu animation */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.mobile-menu {
-  animation: slideDown 0.2s ease-out;
+/* Animation on Scroll classes (to be used with Intersection Observer if needed, 
+   or just for static entrance) */
+.animate-on-scroll {
+  @apply transition-all duration-700;
 }
